@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation =
+			"http://www.springframework.org/schema/beans 
+			 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <!-- :: 공통적인 사항을 설정한 common-servlet.xml 사용. -->            
+                
+	<!-- :: HandlerMapping 선언-->
+	<!-- 어노테이션으로 매핑함 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="order" value="0"/>
+<!-- 		<property name="interceptors" ref="logonCheckInterceptor"/> -->
+	 </bean>
+	 
+	<!--  :: ViewResolver 선언 -->	
+    <bean id="viewResolver"
+				class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
+	
+<!--  :: Interceptor 선언 : 로그인 유무확인. -->
+<!-- 	<bean id="logonCheckInterceptor"  -->
+<!-- 							class="spring.common.web.LogonCheckInterceptor" />							 -->
+	
+<!-- exception resolver  선언 -->
+<!-- 	<bean id="exceptionResolver" -->
+<!-- 				class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"> -->
+		
+<!-- 		<property name="exceptionMappings"> -->
+<!-- 			<props> -->
+<!-- 				<prop key="java.lang.NullPointerException">/common/nullError.jsp</prop> -->
+<!-- 				<prop key="java.lang.NumberFormatException">/common/numberFormatError.jsp</prop> -->
+<!-- 			</props> -->
+<!-- 		</property> -->
+		
+<!-- 		<property name="defaultErrorView"	value="/common/error.jsp" /> -->
+		
+<!-- 	</bean> -->
+
+</beans>

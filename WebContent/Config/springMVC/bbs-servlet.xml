@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation=
+				"http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+				http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+				
+				
+    <context:component-scan base-package="shop.service.bbs">
+		<context:exclude-filter 	type="annotation" 
+													expression="org.springframework.stereotype.Service"/>
+		<context:exclude-filter 	type="annotation" 
+													expression="org.springframework.stereotype.Repository"/>
+	</context:component-scan>
+	<!-- 
+	<bean name="/bbsList.do" class="shop.service.bbs.view.BbsListController">
+		<property name="commandName" value="bbs"/>	
+		<property name="commandClass" value="shop.service.bbs.domain.Bbs"/>
+		<property name="formView" value="/Bbs/bbsList.jsp?no=1"/>
+		<property name="successView" value="mainView.do"/>
+		<property name="bbsService" ref="bbsServiceImpl"/>
+	</bean>
+	
+	<bean name="/addBbs.do" class="shop.service.bbs.view.AddBbsController">
+		<property name="commandName" value="bbs"/>
+		<property name="commandClass" value="shop.service.bbs.domain.Bbs"/>
+		<property name="formView" value="Bbs/addBbsView.jsp"/>
+		<property name="successView" value="bbsList.do?no=1"/>
+		<property name="bbsService" ref="bbsServiceImpl"/>
+	</bean>
+	
+	<bean name="/getBbs.do" class="shop.service.bbs.view.GetBbsController">
+		<property name="commandName" value="bbs"/>
+		<property name="commandClass" value="shop.service.bbs.domain.Bbs"/>
+		<property name="formView" value="Bbs/getBbsView.jsp"/>
+		<property name="successView" value="bbsList.do?no=1"/>
+		<property name="bbsService" ref="bbsServiceImpl"/>
+	</bean>
+	
+	<bean name="/updateBbs.do" class="shop.service.bbs.view.UpdateBbsController">
+		<property name="commandName" value="bbs"/>
+		<property name="commandClass" value="shop.service.bbs.domain.Bbs"/>
+		<property name="formView" value="Bbs/updateBbsView.jsp"/>
+		<property name="successView" value="bbsList.do?no=1"/>
+		<property name="bbsService" ref="bbsServiceImpl"/>
+	</bean>
+	
+	<bean name="/deleteBbs.do" class="shop.service.bbs.view.DeleteBbsController">
+		<property name="commandName" value="bbs"/>
+		<property name="commandClass" value="shop.service.bbs.domain.Bbs"/>
+		<property name="formView" value="Bbs/deleteBbsView.jsp"/>
+		<property name="successView" value="bbsList.do?no=1"/>
+		<property name="bbsService" ref="bbsServiceImpl"/>
+	</bean>
+ -->
+</beans>
